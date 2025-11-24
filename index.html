@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Feliz cumpleaños, mi amor ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <section>
+      <div class="u-wrapper">
+        <div class="content">
+          <div class="letter">
+            <h1 class="letter__title title">Feliz cumpleaños, mi amor hermosa ❤️</h1>
+            <figure class="letter__imageContainer">
+              <img class="letter__image" src="./assets/cake.png" height="436" width="360" alt="Pastel de cumpleaños" />
+            </figure>
+            <button class="letter__cta cta-primary" id="open-modal">Esto es para ti ❤️</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="overlay" id="overlay">
+      <div class="modal" id="modal">
+        <h2 class="modal__title" tabindex="0" id="modal-title">Título</h2>
+        <button class="modal__close-icon" aria-label="Cerrar modal" title="Cerrar modal" id="close-modal">
+        </button>
+        <div class="modal__body">
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
