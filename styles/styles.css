@@ -4,6 +4,8 @@
   --white: #ececec;
   --black: #0b081c;
   --surface: #241f3a;
+  --surface-2: #1d293d;
+  --border-color: #314158;
   /* FONTS */
   --font: "Montserrat", sans-serif;
   /* SPACING */
@@ -31,6 +33,8 @@ body {
   background-color: var(--background-color);
   background-image: url("../assets/bg.avif");
   background-repeat: repeat-y;
+  background-position: 0 0;
+  background-size: 100%;
 }
 
 figure {
@@ -68,13 +72,14 @@ h1 {
 }
 
 .cta-primary {
-  background-color: var(--white);
+  border: none;
   color: var(--black);
   border-radius: 30px;
   font-family: var(--font);
   font-size: 16px;
   padding: var(--space-2) var(--space-3);
   cursor: pointer;
+  background-color: var(--white);
 
   &:hover {
     background-color: #f2f4f8;
@@ -106,14 +111,15 @@ h1 {
   position: relative;
   width: 100%;
   max-width: 500px;
-  padding: var(--space-2);
+  padding: var(--space-3) var(--space-2);
   border-radius: 0.5em;
-  text-align: center;
+  text-align: start;
   background-color: var(--surface);
   border-radius: var(--border-radius);
 }
 
 .modal__title {
+  margin: 0;
   font-family: var(--font);
   font-size: 20px;
   color: var(--white);
@@ -131,6 +137,48 @@ h1 {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.modal__description {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--white);
+}
+
+.form div {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: var(--space);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-family: var(--font);
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--surface-2);
+  color: var(--white);
+}
+
+.form__button {
+  position: absolute;
+  right: var(--space);
+  padding: var(--space) var(--space-2);
 }
 
 @keyframes modalIn {

@@ -24,7 +24,8 @@ const $overlay = document.querySelector('#overlay');
 const $modal = document.querySelector('#modal');
 const $closeModal = document.querySelector('#close-modal');
 
-function hideModal() {
+function hideModal(event) {
+  event.stopPropagation();
   $modal.style.animation = 'modalOut .8s forwards';
   $overlay.classList.remove('active');
 }
@@ -38,3 +39,6 @@ $openModal.addEventListener('click', () => {
 });
 $closeModal.addEventListener('click', hideModal);
 $overlay.addEventListener('click', hideModal);
+$modal.addEventListener('click', function(event) {
+  event.stopPropagation();
+})
