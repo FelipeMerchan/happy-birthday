@@ -220,6 +220,14 @@ h1 {
   vertical-align: top;
 }
 
+.password {
+  margin: 0;
+  display: inline-block;
+  padding: var(--space) var(--space-2);
+  background-color: var(--surface-2);
+  border-radius: var(--border-radius);
+}
+
 @keyframes fadeIn {
   to {
     opacity: 1;
