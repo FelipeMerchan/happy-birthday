@@ -6,6 +6,7 @@
   --surface: #241f3a;
   --surface-2: #1d293d;
   --border-color: #314158;
+  --error-color: #ff0000;
   /* FONTS */
   --font: "Montserrat", sans-serif;
   /* SPACING */
@@ -110,7 +111,10 @@ h1 {
 .modal {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 398px;
+  max-height: calc(100vh - 64px);
+  overflow-y: scroll;
+  box-sizing: border-box;
   padding: var(--space-3) var(--space-2);
   border-radius: 0.5em;
   text-align: start;
@@ -146,6 +150,10 @@ h1 {
   color: var(--white);
 }
 
+.modal__description strong {
+  font-weight: 600;
+}
+
 .form div {
   position: relative;
   display: flex;
@@ -175,10 +183,47 @@ h1 {
   color: var(--white);
 }
 
+.form__error-message {
+  display: none;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--error-color);
+}
+
 .form__button {
   position: absolute;
   right: var(--space);
   padding: var(--space) var(--space-2);
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.surprise-section__image-container {
+  overflow: hidden;
+  height: 340px;
+  width: 100%;
+  margin: var(--space-2) 0 0;
+  border-radius: var(--border-radius);
+}
+
+.surprise-section__image {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes modalIn {
